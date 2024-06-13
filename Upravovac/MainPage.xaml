@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Upravovac.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                x:Name="OpenedFile"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Clicked="Button_Clicked"
+                Text="Open File"
+                HorizontalOptions="Center"/>
+
+            <StackLayout 
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+
+                <Editor
+                    x:Name="EIn"
+                    IsReadOnly="True"
+                    BackgroundColor="LightGrey"
+                    WidthRequest="400"
+                    HeightRequest="400"
+                    HorizontalOptions="Center"/>
+                
+                <Editor
+                    x:Name="EOut"
+                    IsReadOnly="True"
+                    BackgroundColor="LightGrey"
+                    WidthRequest="400"
+                    HeightRequest="400"
+                    HorizontalOptions="Center"/>
+
+            </StackLayout>
+
+            <Button 
+                Text="Save" 
+                x:Name="SaveBtn"
+                Clicked="SaveBtn_Clicked"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
